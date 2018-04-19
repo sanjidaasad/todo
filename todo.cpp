@@ -47,6 +47,21 @@ void Show_file()
    }
 }
 
+void Delete(int x)
+{
+	for(int i=0;i<listSize;i++)
+	{
+		if(x<i)
+		{
+			data[i-1].name=data[i].name;
+			data[i-1].description=data[i].description;
+			data[i-1].Date=data[i].Date;
+		}
+	}
+	listSize-=1;
+
+}
+
 int main()
 {
    int choice = 0;
