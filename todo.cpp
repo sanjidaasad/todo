@@ -32,6 +32,21 @@ bool Add_in_file(string name,string description, string Date)
    }
 }
 
+void Show_file()
+{
+	ofstream file_open("To_Do_list.txt",ios::app);
+   for (int i = 0; i < listSize; i++)
+   {
+   	  file_open<<data[i].name<<endl;
+   	  file_open<<data[i].description<<endl;
+   	  file_open<<data[i].Date<<endl;
+   	  cout<<"Name : "<<data[i].name<<endl;
+      cout <<"Description : "<<data[i].description << endl;
+      cout <<"Date : "<< data[i].Date << endl;
+      cout << "" << endl;
+   }
+}
+
 int main()
 {
    int choice = 0;
